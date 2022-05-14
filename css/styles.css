@@ -702,11 +702,12 @@ font-family: Roboto, sans-serif;
 .photo-item:nth-child(n+7) {
     margin-bottom: 0;
 }
+
 .photo-a {
-    position: relative;
+   position: relative;
     display: block;
-    text-decoration: none;
-     overflow: hidden;
+    text-decoration: none;  
+    
     
 }
 .photo-a:hover, .photo-a:focus {
@@ -715,10 +716,14 @@ font-family: Roboto, sans-serif;
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .photo-img {
-    position: relative;
+    
     display: block;
     margin-bottom: 0;
-   
+    overflow: hidden;      
+}
+.container-ovelay {
+    position: relative;
+    overflow: hidden;
 }
 .text-container {   
     margin-bottom: 0;
@@ -751,7 +756,7 @@ font-family: Roboto, sans-serif;
 }*/
 .text-overlay {
     position: absolute;
-    display: block;
+    
     width: 100%;
     height: 294px;
     padding: 63px 24px;
@@ -768,8 +773,9 @@ font-family: Roboto, sans-serif;
     line-height: 1.56;
     letter-spacing: 0.03em;
 
-    background: rgba(33, 150, 243, 0.9);
+    
     color: var(--white-color);
+    background: rgba(33, 150, 243, 0.9);
 }
 
 .photo-a:hover .text-overlay {
