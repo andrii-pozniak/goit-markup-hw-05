@@ -33,7 +33,8 @@ font-family: Roboto, sans-serif;
 }
 
 /* header */
-.page-header {        
+.page-header {
+    position: relative;        
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ECECEC;
@@ -184,6 +185,53 @@ font-family: Roboto, sans-serif;
     
     color: var(--white-color);    
     text-align: center;      
+}
+.hero-container {
+    position: relative;
+}
+.hero-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    pointer-events: none;
+
+    width: 100%;
+    height: 1024px;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+    
+.hero-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.hero-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 8px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.img-button {
+    display: block;
+    margin: 0;
+    justify-content: center;
 }
 .hero-title {
     width: 696px;  
@@ -702,12 +750,10 @@ font-family: Roboto, sans-serif;
 .photo-item:nth-child(n+7) {
     margin-bottom: 0;
 }
-
 .photo-a {
    position: relative;
     display: block;
-    text-decoration: none;  
-    
+    text-decoration: none;    
     
 }
 .photo-a:hover, .photo-a:focus {
@@ -715,8 +761,7 @@ font-family: Roboto, sans-serif;
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.photo-img {
-    
+.photo-img {    
     display: block;
     margin-bottom: 0;
     overflow: hidden;      
@@ -751,9 +796,7 @@ font-family: Roboto, sans-serif;
 
     color: var(--primery-text-color);
 }
-/*.container-overlay {
-    position: relative;
-}*/
+
 .text-overlay {
     position: absolute;
     
@@ -778,7 +821,7 @@ font-family: Roboto, sans-serif;
     background: rgba(33, 150, 243, 0.9);
 }
 
-.photo-a:hover .text-overlay {
+.container-ovelay:hover .text-overlay {
     transform: translateY(0);
 }
 /* вторичный цвет текста #212121;*/
