@@ -52,16 +52,16 @@
         <!--Герой-->
         <section class="hero-section">
             <div class="hero-container">
-                <div class="hero-backdrop">
-                    <div class="hero-modal">
-                        <button class="hero-button" data-modal-close> 
-                            <img src="./img/close-black.svg" class="img-button" alt="свернуть">
-                        </button>
-                    </div>
-
-                </div>
+               
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="button" data-modal-open >Заказать услугу</button>
+                <div data-modal class="hero-backdrop is-hidden" >
+                    <div class="hero-modal">
+                       <button data-modal-close type="button" class="hero-button"> 
+                           <svg class="hero-svg"><use href="./img/logo company/sprite.svg#icon-close-black"></use></svg>
+                       </button>
+                    </div>
+                </div>
             </div >
         </section>
         <!--Особенности-->
@@ -248,54 +248,53 @@
                 </ul>
            </div>
         </section>
-    </main>
-    <!--Customer-->
-    <section class="customer">
-        <div class="container">
-            <h2 class="customer-title">Постоянные клиенты</h2>
-            <div class="customer-container">
-                <ul class="customer-list list">
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                            <use href="./img/logo company/sprite.svg#icon-Logo1"></use>
-                        </svg></a>
-
-                    </li>
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                                <use href="./img/logo company/sprite.svg#icon-Logo2"></use>
-                            </svg></a>
-
-                    </li>
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                                <use href="./img/logo company/sprite.svg#icon-Logo3"></use>
-                            </svg></a>
-
-                    </li>
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                                <use href="./img/logo company/sprite.svg#icon-Logo4"></use>
-                            </svg></a>
-
-                    </li>
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                                <use href="./img/logo company/sprite.svg#icon-Logo5"></use>
-                            </svg></a>
-
-                    </li>
-                    <li class="customer-icon">
-                        <a href="" class="customer-logo"> <svg class="customer-svg">
-                                <use href="./img/logo company/sprite.svg#icon-Logo6"></use>
-                            </svg></a>
-
-                    </li>
-                </ul>
+        <!--Customer-->
+        <section class="customer">
+            <div class="container">
+                <h2 class="customer-title">Постоянные клиенты</h2>
+                <div class="customer-container">
+                    <ul class="customer-list list">
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo1"></use>
+                                </svg></a>
+        
+                        </li>
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo2"></use>
+                                </svg></a>
+        
+                        </li>
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo3"></use>
+                                </svg></a>
+        
+                        </li>
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo4"></use>
+                                </svg></a>
+        
+                        </li>
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo5"></use>
+                                </svg></a>
+        
+                        </li>
+                        <li class="customer-icon">
+                            <a href="" class="customer-logo"> <svg class="customer-svg">
+                                    <use href="./img/logo company/sprite.svg#icon-Logo6"></use>
+                                </svg></a>
+        
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-   
+        </section>
+    </main>    
     <!--Footer-->
     <footer class="hooter">
        <div class="container">
@@ -344,22 +343,6 @@
             </div>
        </div>
     </footer>
-    <script src="./js/modal.js">
-        (() => {
-                const refs = {
-                    openModalBtn: document.querySelector("[data-modal-open]"),
-                    closeModalBtn: document.querySelector("[data-modal-close]"),
-                    modal: document.querySelector("[data-modal]"),
-                };
-
-                refs.openModalBtn.addEventListener("click", toggleModal);
-                refs.closeModalBtn.addEventListener("click", toggleModal);
-
-                function toggleModal() {
-                    refs.modal.classList.toggle("is-hidden");
-                }
-            })();
-    </script>
-    
+    <script src="./js/modal.js"></script>    
 </body>
 </html>
